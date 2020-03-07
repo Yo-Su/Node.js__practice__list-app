@@ -23,6 +23,9 @@
           <% cats.forEach((cat) => { %>
             <div class="list">
               <p>猫番：<%= cat.id %>   名前：<%= cat.name %>   色：<%= cat.color %></p>
+              <form action="/delete/<%= cat.id %>" method="post">
+                <input type="submit" value="削除">
+              </form>
             </div>
           <% }) %>
         </div>

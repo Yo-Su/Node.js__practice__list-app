@@ -26,6 +26,10 @@ h1 {
   padding: 10px;
 }
 
+.list {
+  display: flex;
+}
+
 .image-area {
   text-align: center;
 }
