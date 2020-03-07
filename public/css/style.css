@@ -8,14 +8,19 @@ h1 {
 }
 
 .header {
-  background-color: #ffd;
+  background-color: #ffc;
   height: 200px;
   width: 100%;
   padding: 10px;
 }
 
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
 .main {
-  background-color: #fdf;
+  background-color: #fcf;
   height: calc(100% - 300px);
   width: 100%;
   padding: 10px;
@@ -30,7 +35,7 @@ h1 {
 }
 
 .footer {
-  background-color: #dff;
+  background-color: #cff;
   height: 100px;
   width: 100%;
   padding: 10px;

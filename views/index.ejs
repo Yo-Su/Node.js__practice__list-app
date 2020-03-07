@@ -13,15 +13,24 @@
         <a href="/" class="link">
           <h1 class="title">Node.js学習用</h1>
         </a>
+        <div class="image-area">
+          <img class="image" src="/images/neko2.jpg">
+        </div>
       </div>
       <div class="main">
         <div class="text">
-          <p>サンプル作成</p>
+          <% const cats = [
+            {id: 1, name: 'タマ'},
+            {id: 2, name: 'ミケ'},
+            {id: 3, name: 'クロ'}
+          ] %>
+          <p>猫羅列</p>
+          <% cats.forEach((cat) => { %>
+            <div class="list">
+              <p>猫番号：<%= cat.id %>   名前：<%= cat.name %></p>
+            </div>
+          <% }) %>
         </div>
-        <div class="image-area">
-          <img class="image" src="/images/neko.png">
-        </div>
-        <a href="/index" class="link">猫一覧へ</a>
       </div>
       <div class="footer">
         <p>このサイトは学習用</p>
