@@ -1,0 +1,37 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.header {
+  background-color: #ffd;
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+}
+
+.main {
+  background-color: #fdf;
+  height: calc(100% - 300px);
+  width: 100%;
+  padding: 10px;
+}
+
+.image-area {
+  text-align: center;
+}
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.footer {
+  background-color: #dff;
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+}
