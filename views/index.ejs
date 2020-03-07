@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>リストApp</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <!-- <script src="/send_url.js"></script> -->
   </head>
   <body>
@@ -14,26 +14,28 @@
           <h1 class="title">Node.js学習用</h1>
         </a>
         <div class="image-area">
-          <img class="image" src="/images/neko2.jpg">
+          <img class="image" src="/images/neko2.jpg" />
         </div>
       </div>
       <div class="main">
         <div class="text">
           <p>猫一覧</p>
           <% cats.forEach((cat) => { %>
-            <div class="list">
-              <p>猫番：<%= cat.id %>   名前：<%= cat.name %>   色：<%= cat.color %></p>
-              <form action="/delete/<%= cat.id %>" method="post">
-                <input type="submit" value="削除">
-              </form>
-            </div>
+          <div class="list">
+            <p>
+              猫番：<%= cat.id %> 名前：<%= cat.name %> 色：<%= cat.color %>
+            </p>
+            <form action="/delete/<%= cat.id %>" method="post">
+              <input type="submit" value="削除" />
+            </form>
+          </div>
           <% }) %>
         </div>
         <div class="form-area">
           <form action="/create" method="post">
-            <input type="text" name="catName">
-            <input type="text" name="catColor">
-            <input type="submit" value="仲間を呼ぶ">
+            <input type="text" name="catName" />
+            <input type="text" name="catColor" />
+            <input type="submit" value="仲間を呼ぶ" />
           </form>
         </div>
       </div>
