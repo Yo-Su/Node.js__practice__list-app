@@ -19,17 +19,19 @@
       </div>
       <div class="main">
         <div class="text">
-          <% const cats = [
-            {id: 1, name: 'タマ'},
-            {id: 2, name: 'ミケ'},
-            {id: 3, name: 'クロ'}
-          ] %>
-          <p>猫羅列</p>
+          <p>猫一覧</p>
           <% cats.forEach((cat) => { %>
             <div class="list">
-              <p>猫番号：<%= cat.id %>   名前：<%= cat.name %></p>
+              <p>猫番：<%= cat.id %>   名前：<%= cat.name %>   色：<%= cat.color %></p>
             </div>
           <% }) %>
+        </div>
+        <div class="form-area">
+          <form action="/create" method="post">
+            <input type="text" name="catName">
+            <input type="text" name="catColor">
+            <input type="submit" value="仲間を呼ぶ">
+          </form>
         </div>
       </div>
       <div class="footer">
