@@ -20,6 +20,7 @@
       <div class="main">
         <div class="text">
           <p>猫一覧</p>
+          <!-- 猫一覧表示 -->
           <% cats.forEach((cat) => { %>
           <div class="list">
             <p>
@@ -30,8 +31,28 @@
             </form>
           </div>
           <% }) %>
+          <!-- 猫一覧表示ここまで -->
+
+          <!-- update処理用FormArea -->
+          <div class="form-area">
+            <form action="/update" method="post">
+              <select name="catId" id="catId">
+                <% cats.forEach((cat) => { %>
+                  <option value="<%= cat.id %>">
+                    <%= cat.id %>: <%= cat.name %>
+                  </option>
+                <% }) %>
+              </select>
+              <input type="text" name="catName" />
+              <input type="text" name="catColor" />
+              <input type="submit" value="猫は変身した" />
+            </form>
+          </div>
+          <!-- update処理用FormAreaここまで -->
         </div>
+
         <div class="form-area">
+          <!-- create -->
           <form action="/create" method="post">
             <input type="text" name="catName" />
             <input type="text" name="catColor" />

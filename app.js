@@ -67,5 +67,16 @@ app.post("/delete/:id", (req, res) => {
   );
 });
 
+app.post("/update", (req, res) => {
+  connection.query(
+    // "SELECT * FROM cats WHERE id=?", edit検索用
+    "UPDATE cats SET name=?, color=? WHERE id=?",
+    [req.body.catName, req.body.catColor, req.body.catId],
+    (error,results) => {
+      res.redirect("/index");
+    }
+  );
+});
+
 // localhost:3000のサーバー起動
 app.listen(3000);
